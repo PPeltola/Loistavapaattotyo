@@ -1,0 +1,19 @@
+camera - kamerajuttuja - hump
+
+class - olio-ohjemointijuttuja - hump
+
+gamestate - gamestate-systeemi - hump
+
+menu - valikkojuttuja - https://love2d.org/forums/viewtopic.php?f=5&t=3636 (saisi myos menuScroll)
+
+signal - joku signaalirekisterjuttu, selvitetään myöhemmin - hump - ehka turha?
+
+SoundManager - aani - en edes tieda mista tama on
+
+STI - Simple Tiled Implementation, taman implementointi on viela vaiheessa
+
+timer - ajastinjuttuja ja tweenausjotain - hump
+
+vector - 2D-vektorilaskentajuttuja - hump - turha?
+
+vector-light - kevyempi vector - hump - turha?
