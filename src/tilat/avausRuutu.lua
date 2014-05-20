@@ -10,9 +10,6 @@ avausRuutu = {}
 
 function avausRuutu:init()
 
-	-- Asetetaan fontti titlelle sopivaksi
-	love.graphics.setFont( laatikkoFontti )
-
 	-- Luodaan ajastin ja totuusarvo valkkyvaa tekstia varten
 	valkkyvyysAjastin = Timer.new()
 	naytetaankoTeksti = true
@@ -34,7 +31,7 @@ end
 function avausRuutu:draw()
 
 	-- Piiretaan tausta
-	love.graphics.draw(kuvat["UKKtausta.png"], 0, 0)
+	love.graphics.draw( kuvat[ "ukk_tausta.png" ], 0, 0 )
 
 	-- Piirretaan suuri nimi/title
 	love.graphics.print( "VIDEOPELI", 30, 100, 0, 1.5, 1.5 )
@@ -51,12 +48,12 @@ function avausRuutu:keypressed( nappain )
 
 	-- Tarkistetaan mita nappainta on painettu, ja toimitaan sen mukaisesti
 	if nappain == "escape" then
-		print("Paussivalikko")
+		love.event.quit()
 		-- Vaihdetaan paussivalikko
 
 	elseif nappain == "return" then
-		print("Karttavalikko")
-		-- Vaihdetaan karttavalikko
+		print( "Paavalikko ")
+		Gamestate.switch( valikko, self )
 
 	end
 

@@ -8,6 +8,9 @@
 love.mouse.setVisible( false )
 
 
+love.graphics.setDefaultFilter( "nearest", "nearest", 1 )
+
+
 -- Luodaan latausta helpottavat polut ja asetetaan ne muuttujiin
 AANI_POLKU = "media/aanet/"
 FONTTI_POLKU = "media/fontit/"
@@ -30,6 +33,8 @@ Timer = require ( KIRJASTO_POLKU .. "timer" )
 print("Ladataan valmiit kirjastot")
 
 require ( TILA_POLKU .. "avausRuutu" )
+require ( TILA_POLKU .. "valikko" )
+require ( TILA_POLKU .. "peli" )
 
 print("Ladataan omat tilat, yms.")
 
@@ -37,6 +42,9 @@ print("Ladataan omat tilat, yms.")
 -- Ladataan fontit
 comicSans = love.graphics.newFont( FONTTI_POLKU .. "comicsans.ttf", 15 )
 laatikkoFontti = love.graphics.newFont( FONTTI_POLKU .. "boxybold.ttf", 36 )
+
+-- Asetetaan fontti
+love.graphics.setFont( laatikkoFontti )
 
 print("Ladataan fontit")
 
@@ -52,4 +60,4 @@ for _, kuva in ipairs( kuvaVarasto ) do
 end
 
 
-print("\nKaikki kama ladattu\n")
+print( "\nKaikki kama ladattu\n" )
