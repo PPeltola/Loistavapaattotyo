@@ -25,6 +25,7 @@ print( "Asetetaan tiedostopolut" )
 
 
 -- Ladataan valmiit kirjastot
+require(KIRJASTO_POLKU.."TEsound")
 Menu = require( KIRJASTO_POLKU .. "menu" )
 Gamestate = require( KIRJASTO_POLKU .. "gamestate" )
 STI = require "src/kirjastot.STI"
@@ -33,6 +34,7 @@ Timer = require ( KIRJASTO_POLKU .. "timer" )
 print("Ladataan valmiit kirjastot")
 
 require ( TILA_POLKU .. "avausRuutu" )
+require ( TILA_POLKU .. "asetukset" )
 require ( TILA_POLKU .. "valikko" )
 require ( TILA_POLKU .. "peli" )
 
