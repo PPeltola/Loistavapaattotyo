@@ -2,6 +2,11 @@ GAMESTATET:
 
 	- Avausruutu
 
+	- Asetukset
+		* Fullscreen
+		* Musiikki
+		* Äänet (tämähän on .txt, kai saa käyttää ä&ö)
+
 	- Alkumenut:
 
 		* Montako pelaajaa

@@ -24,14 +24,16 @@ function valikko:init()
 	paavalikko:addItem{
 		nimi = "Asetukset",
 		toiminto = function()
-			-- Gamestate.switch( asetukset, self.mista )
+			 Gamestate.switch( asetukset )
 			print("Asetukset")
 		end
 	}
 
 	paavalikko:addItem{
 		nimi = "Lopeta",
+
 		toiminto = function()
+			print("Peli loppuu")
 			love.event.quit()
 		end
 	}
