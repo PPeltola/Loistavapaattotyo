@@ -5,7 +5,7 @@ GAMESTATET:
 	- Asetukset
 		* Fullscreen
 		* Musiikki
-		* Äänet (tämähän on .txt, kai saa käyttää ä&ö)
+		* Aanet 
 
 	- Alkumenut:
 
