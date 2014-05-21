@@ -11,7 +11,7 @@ end
 
 function tahtidemo:update(dt)
 	numero = numero + 1
-	viesti = '*'
+	viesti = 'ES'
 	love.graphics.setColor( numero / 2 % 255, numero * 2 % 255, numero * numero % 255 )
 end
 
