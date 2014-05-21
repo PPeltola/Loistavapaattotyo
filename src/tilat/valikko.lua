@@ -1,5 +1,5 @@
 --[[
-	Paavalikko
+	Valikko
 --]]
 
 
@@ -9,15 +9,13 @@ valikko = {}
 
 function valikko:init()
 
-	onkoPause = false
-
 	paavalikko = Menu.new()
 
 	paavalikko:addItem{
 		nimi = "Aloita peli",
 		toiminto = function()
-			-- Gamestate.switch( peli )
-			print("Peli alkaa")
+			Gamestate.switch( tasovalikko )
+			print("Tasovalikko")
 		end
 	}
 
@@ -31,7 +29,6 @@ function valikko:init()
 
 	paavalikko:addItem{
 		nimi = "Lopeta",
-
 		toiminto = function()
 			print("Peli loppuu")
 			love.event.quit()

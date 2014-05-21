@@ -15,14 +15,10 @@ return {
       tileheight = 32,
       spacing = 0,
       margin = 0,
-      image = "../../../../New folder (2)/Love/Lopputyo/maps/ground/groundtiles.png",
+      image = "laatat/maalaatat.png",
       imagewidth = 128,
       imageheight = 33,
       transparentcolor = "#ffffff",
-      tileoffset = {
-        x = 0,
-        y = 0
-      },
       properties = {},
       tiles = {}
     }

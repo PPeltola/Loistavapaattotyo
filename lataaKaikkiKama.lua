@@ -11,6 +11,8 @@ love.mouse.setVisible( false )
 love.graphics.setDefaultFilter( "nearest", "nearest", 1 )
 
 
+print( "Asetetaan tiedostopolut" )
+
 -- Luodaan latausta helpottavat polut ja asetetaan ne muuttujiin
 AANI_POLKU = "media/aanet/"
 FONTTI_POLKU = "media/fontit/"
@@ -21,25 +23,27 @@ KIRJASTO_POLKU = "src/kirjastot/"
 LUOKKA_POLKU = "src/luokat/"
 TILA_POLKU = "src/tilat/"
 
-print( "Asetetaan tiedostopolut" )
-
-
--- Ladataan valmiit kirjastot
-require(KIRJASTO_POLKU.."TEsound")
-Menu = require( KIRJASTO_POLKU .. "menu" )
-Gamestate = require( KIRJASTO_POLKU .. "gamestate" )
-STI = require "src/kirjastot.STI"
-Timer = require ( KIRJASTO_POLKU .. "timer" )
 
 print("Ladataan valmiit kirjastot")
+
+-- Ladataan valmiit kirjastot
+require( KIRJASTO_POLKU .. "TEsound" )
+Menu = require( KIRJASTO_POLKU .. "menu" )
+Gamestate = require( KIRJASTO_POLKU .. "gamestate" )
+STI = require ( "src/kirjastot.STI" )
+Timer = require ( KIRJASTO_POLKU .. "timer" )
+
+
+print("Ladataan omat tilat, yms.")
 
 require ( TILA_POLKU .. "avausRuutu" )
 require ( TILA_POLKU .. "asetukset" )
 require ( TILA_POLKU .. "valikko" )
+require ( TILA_POLKU .. "tasovalikko" )
 require ( TILA_POLKU .. "peli" )
 
-print("Ladataan omat tilat, yms.")
 
+print("Ladataan fontit")
 
 -- Ladataan fontit
 comicSans = love.graphics.newFont( FONTTI_POLKU .. "comicsans.ttf", 15 )
@@ -47,8 +51,6 @@ laatikkoFontti = love.graphics.newFont( FONTTI_POLKU .. "boxybold.ttf", 36 )
 
 -- Asetetaan fontti
 love.graphics.setFont( laatikkoFontti )
-
-print("Ladataan fontit")
 
 
 -- Luodaan taulukko, johon laitetaan kaikkien ladattavien kuvien tiedostonimet
@@ -61,5 +63,16 @@ for _, kuva in ipairs( kuvaVarasto ) do
 	print( "Ladataan " .. kuva )
 end
 
+
+tasoVarasto = {
+	"Testitaso"
+}
+
+tasot = {}
+
+for _, taso in ipairs( tasoVarasto ) do
+	tasot[taso] = STI.new( TASO_POLKU .. taso )
+	print( "Ladataan " .. taso )
+end
 
 print( "\nKaikki kama ladattu\n" )

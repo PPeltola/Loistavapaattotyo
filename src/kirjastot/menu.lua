@@ -35,10 +35,13 @@ return {
 			end,
 
 
-			draw = function(self, x, y)
+			draw = function(self, x, y, tekstinValiKorkeus, fontinMittakaava)
 
-				local height = 100
-				local width = 300
+				local height = tekstinValiKorkeus or 100
+
+				local fontinMittakaava = fontinMittakaava or 1
+
+				--local width = 300
 
 				-- love.graphics.setColor(255, 255, 255, 128)
 				-- love.graphics.rectangle('fill', x, y + height*(self.selected-1) + (self.animOffset * height), width, height)
@@ -52,7 +55,7 @@ return {
 					else
 						love.graphics.setColor(255, 255, 255, 128)
 					end
-					love.graphics.print(item.nimi, x --[[ + 5 --]], y + height*(i-1) --[[ + 5 --]], 0, 1.4, 1.4)
+					love.graphics.print(item.nimi, x --[[ + 5 --]], y + height*(i-1) --[[ + 5 --]], 0, fontinMittakaava)
 
 					love.graphics.setColor(255, 255, 255)
 				end

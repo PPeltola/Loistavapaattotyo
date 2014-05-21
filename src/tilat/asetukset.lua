@@ -11,18 +11,18 @@ function asetukset:init()
 	asetusvalikko:addItem{
 		nimi = "Kokoruutu",
 		toiminto = function()
-			
+
 			kokoruutu=not kokoruutu
 			print("Kokoruutu:"..tostring(kokoruutu))
 			love.window.setFullscreen(kokoruutu,"normal")
-			
+
 		end
 	}
 
 	asetusvalikko:addItem{
 		nimi = "Aanet",
 		toiminto = function()
-		
+
 			onkoAani=not onkoAani
 			print("Aanet:"..tostring(onkoAani))
 			if onkoAani then
@@ -30,7 +30,7 @@ function asetukset:init()
 			else
 			 TEsound.pause()
 			end
-			
+
 		end
 	}
 
@@ -58,13 +58,28 @@ function asetukset:draw()
 
 	asetusvalikko:draw( 100, 200 )
 
+	if kokoruutu then
+		love.graphics.print("Paalla", 550, 200)
+	else
+		love.graphics.print("Pois", 550, 200)
+	end
+
+	if onkoAani then
+		love.graphics.print("Paalla", 550, 300)
+	else
+		love.graphics.print("Pois", 550, 300)
+	end
+
 end
 
 
 function asetukset:keypressed( nappain )
+
 	if nappain=="escape" then
 		print("Paavalikko")
 		Gamestate.switch( valikko )
 	end
+
 	asetusvalikko:keypressed( nappain )
+
 end
