@@ -38,8 +38,9 @@ function tasovalikko:draw()
 	
 	love.graphics.print( "Valitse taso", 100, 10)
 	
-	love.graphics.draw( kuvat[ tasojenValikko.items[tasojenValikko.selected].nimi .. ".png" ], 30, 100 )
-
+	love.graphics.draw( kuvat[ tasojenValikko.items[tasojenValikko.selected].nimi .. ".png" ], 40, 200 ,0,0.8,0.8)
+	love.graphics.draw( kuvat[ "kekkonen_kehys.png" ], 0, 50 ,0,0.9)--Kekkonen-kehys
+	
 	tasojenValikko:draw( 550, 200, 60, 0.6 )
 
 end
