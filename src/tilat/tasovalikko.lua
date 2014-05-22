@@ -15,8 +15,8 @@ function tasovalikko:init()
 		tasojenValikko:addItem{
 			nimi = tasonNimi,
 			toiminto = function()
-				Gamestate.switch( peli, taso )
-				print( "Peli, tasona " .. tasonNimi )
+				Gamestate.switch( hahmovalikko, taso )
+				print( "Hahmovalintaan, tasona " .. tasonNimi )
 			end
 		}
 
@@ -33,13 +33,13 @@ function tasovalikko:update( dt )
 end
 
 function tasovalikko:draw()
-
-	love.graphics.draw( kuvat[ "testi_tausta.png" ], 0, 0 )
-    
-	love.graphics.draw( kuvat[ tasojenValikko.items[tasojenValikko.selected].nimi .. ".png" ], 50, 180 ,0,0.8,0.8)
- 
-	love.graphics.draw( kuvat[ "kekkonen_kehys.png" ], 0, 0 ,0,0.9)
 	
+	love.graphics.draw( kuvat[ "testi_tausta.png" ], 0, 0 )
+	
+	love.graphics.print( "Valitse taso", 100, 10)
+	
+	love.graphics.draw( kuvat[ tasojenValikko.items[tasojenValikko.selected].nimi .. ".png" ], 30, 100 )
+
 	tasojenValikko:draw( 550, 200, 60, 0.6 )
 
 end

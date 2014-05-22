@@ -10,7 +10,6 @@ love.mouse.setVisible( false )
 
 love.graphics.setDefaultFilter( "nearest", "nearest", 1 )
 
-
 print( "Asetetaan tiedostopolut" )
 
 -- Luodaan latausta helpottavat polut ja asetetaan ne muuttujiin
@@ -40,8 +39,9 @@ require ( TILA_POLKU .. "avausRuutu" )
 require ( TILA_POLKU .. "asetukset" )
 require ( TILA_POLKU .. "valikko" )
 require ( TILA_POLKU .. "tasovalikko" )
+require ( TILA_POLKU .. "hahmovalikko" )
 require ( TILA_POLKU .. "peli" )
-
+require ("src/pelaaja")
 
 print("Ladataan fontit")
 
@@ -63,6 +63,18 @@ for _, kuva in ipairs( kuvaVarasto ) do
 	print( "Ladataan " .. kuva )
 end
 
+hahmoVarasto = {
+	"Velho",
+	"Ritari",
+	
+}
+
+hahmot = {}
+
+for _, hahmo in ipairs( hahmoVarasto ) do
+	table.insert(hahmot, hahmo)
+	print( "Ladataan " ..hahmo )
+end
 
 tasoVarasto = {
 	"Testitaso",
