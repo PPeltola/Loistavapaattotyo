@@ -17,7 +17,7 @@ function love.load()
 end
 
 function love.update( dt )
-
+	TEsound.cleanup()
 end
 
 function love.draw()

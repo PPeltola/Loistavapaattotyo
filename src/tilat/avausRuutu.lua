@@ -9,7 +9,7 @@ avausRuutu = {}
 
 
 function avausRuutu:init()
-
+	TEsound.playLooping("media/aanet/musiikki/avausRuutu.ogg", "musiikki")
 	-- Luodaan ajastin ja totuusarvo valkkyvaa tekstia varten
 	valkkyvyysAjastin = Timer.new()
 	naytetaankoTeksti = true
