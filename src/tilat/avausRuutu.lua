@@ -52,6 +52,7 @@ function avausRuutu:keypressed( nappain )
 		-- Vaihdetaan paussivalikko
 
 	elseif nappain == "return" then
+		TEsound.play("media/aanet/tehosteet/menuclick.ogg")
 		print( "Paavalikko ")
 		Gamestate.switch( valikko, self )
 

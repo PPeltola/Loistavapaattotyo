@@ -11,7 +11,7 @@ function asetukset:init()
 	asetusvalikko:addItem{
 		nimi = "Kokoruutu",
 		toiminto = function()
-
+			
 			kokoruutu=not kokoruutu
 			print("Kokoruutu:"..tostring(kokoruutu))
 			love.window.setFullscreen(kokoruutu,"normal")
@@ -22,13 +22,22 @@ function asetukset:init()
 	asetusvalikko:addItem{
 		nimi = "Aanet",
 		toiminto = function()
-
+		
 			onkoAani=not onkoAani
 			print("Aanet:"..tostring(onkoAani))
 			if onkoAani then
-			 TEsound.resume()
+			 
+			 TEsound.volume("all",1)
+			 TEsound.resume("all")
+			 TEsound.play("media/aanet/tehosteet/onkoaani.ogg")
+			 print("Nyt on aani")
+			 
 			else
+			
+			 TEsound.volume("all",0)
 			 TEsound.pause()
+			 print("Nyt ei ole aanta")
+			 
 			end
 
 		end
@@ -76,8 +85,13 @@ end
 function asetukset:keypressed( nappain )
 
 	if nappain=="escape" then
-		print("Paavalikko")
-		Gamestate.switch( valikko )
+		if peliAlkanut then
+		print("Paussivalikko")
+		Gamestate.push( paussivalikko )
+		else
+		Gamestate.push( valikko )
+		end
+		
 	end
 
 	asetusvalikko:keypressed( nappain )

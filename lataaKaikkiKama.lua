@@ -40,6 +40,7 @@ require ( TILA_POLKU .. "asetukset" )
 require ( TILA_POLKU .. "valikko" )
 require ( TILA_POLKU .. "tasovalikko" )
 require ( TILA_POLKU .. "hahmovalikko" )
+require ( TILA_POLKU .. "paussivalikko" )
 require ( TILA_POLKU .. "peli" )
 require ("src/pelaaja")
 
@@ -90,3 +91,6 @@ for _, taso in ipairs( tasoVarasto ) do
 end
 
 print( "\nKaikki kama ladattu\n" )
+
+onkoAani=true
+peliAlkanut=false

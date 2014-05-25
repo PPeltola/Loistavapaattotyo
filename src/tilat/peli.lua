@@ -8,7 +8,7 @@ peli = {}
 
 
 function peli:init()
-
+	peliAlkanut=true 
 	x  = 300
 	y = 300
 	r = 1
@@ -50,6 +50,7 @@ end
 function peli:keypressed( nappain )
 
 	if nappain == "escape" then
+		Gamestate.push(paussivalikko,"peli")
 		print("Paussivalikko")
 	end
 

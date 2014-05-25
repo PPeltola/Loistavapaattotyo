@@ -63,6 +63,9 @@ return {
 
 
 			keypressed = function(self, key)
+			if key then
+			TEsound.play("media/aanet/tehosteet/menuclick.ogg")
+			end
 				if key == 'up' then
 					if self.selected > 1 then
 						self.selected = self.selected - 1
