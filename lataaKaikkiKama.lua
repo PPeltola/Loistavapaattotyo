@@ -80,7 +80,8 @@ end
 tasoVarasto = {
 	"Testitaso",
 	"Aavikko",
-	"Pilvenpiirtaja"
+	"Pilvenpiirtaja",
+	"Eduskunta"
 }
 
 tasot = {}
