@@ -30,6 +30,14 @@ function valikko:init()
 	}
 
 	paavalikko:addItem{
+		nimi = "Tekstit",
+		toiminto = function()
+			print("Lopputekstit")
+			Gamestate.switch( lopputekstit )
+		end
+	}
+	
+	paavalikko:addItem{
 		nimi = "Lopeta",
 		toiminto = function()
 			print("Peli loppuu")

@@ -32,7 +32,6 @@ Gamestate = require( KIRJASTO_POLKU .. "gamestate" )
 STI = require ( "src/kirjastot.STI" )
 Timer = require ( KIRJASTO_POLKU .. "timer" )
 
-
 print("Ladataan omat tilat, yms.")
 
 require ( TILA_POLKU .. "avausRuutu" )
@@ -42,6 +41,7 @@ require ( TILA_POLKU .. "tasovalikko" )
 require ( TILA_POLKU .. "hahmovalikko" )
 require ( TILA_POLKU .. "paussivalikko" )
 require ( TILA_POLKU .. "peli" )
+require ( TILA_POLKU .. "lopputekstit" )
 require ("src/pelaaja")
 
 print("Ladataan fontit")

@@ -8,7 +8,7 @@ peli = {}
 
 
 function peli:init()
-	love.graphics.setBackgroundColor(153, 204, 255)
+	love.graphics.setBackgroundColor(100, 42, 100)
 	TEsound.stop("musiikki")
 	peliAlkanut=true 
 	x  = 300
