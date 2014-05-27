@@ -5,8 +5,9 @@
 asetukset = {}
 
 function asetukset:init()
-
-	asetusvalikko = Menu.new()
+	onkoMusiikki=true
+	volyymi=1
+	asetusvalikko= Menu.new()
 
 	asetusvalikko:addItem{
 		nimi = "Kokoruutu",
@@ -20,29 +21,36 @@ function asetukset:init()
 	}
 
 	asetusvalikko:addItem{
-		nimi = "Aanet",
+		nimi = "Volyymi",
 		toiminto = function()
-		
-			onkoAani=not onkoAani
-			print("Aanet:"..tostring(onkoAani))
-			if onkoAani then
+					
+			 volyymi=volyymi+0.1
+			 if volyymi > 1 then
+			 volyymi=0
+			 end
+			 TEsound.volume("all",volyymi)
 			 
-			 TEsound.volume("all",1)
-			 TEsound.resume("all")
+			  print("Volyymi:"..volyymi)
 			 TEsound.play("media/aanet/tehosteet/onkoaani.ogg")
-			 print("Nyt on aani")
-			 
-			else
 			
-			 TEsound.volume("all",0)
-			 TEsound.pause()
-			 print("Nyt ei ole aanta")
-			 
+
+		end
+	}
+	
+	asetusvalikko:addItem{
+		nimi = "Musiikki",
+		toiminto = function()
+			
+			onkoMusiikki=not onkoMusiikki
+			print("Musiikki:"..tostring(onkoMusiikki))
+			if onkoMusiikki then
+			TEsound.resume("musiikki")
+			else
+			TEsound.pause("musiikki")
 			end
 
 		end
 	}
-
 
 end
 
@@ -73,12 +81,15 @@ function asetukset:draw()
 		love.graphics.print("Pois", 550, 200)
 	end
 
-	if onkoAani then
-		love.graphics.print("Paalla", 550, 300)
-	else
-		love.graphics.print("Pois", 550, 300)
-	end
+	
+		love.graphics.print((volyymi*100).."%", 550, 300)
+	
 
+	if onkoMusiikki then
+		love.graphics.print("Paalla", 550, 400)
+	else
+		love.graphics.print("Pois", 550, 400)
+	end
 end
 
 

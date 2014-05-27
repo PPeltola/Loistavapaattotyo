@@ -10,6 +10,7 @@ valikko = {}
 function valikko:init()
 	TEsound.stop("musiikki")
 	TEsound.playLooping("media/aanet/musiikki/paavalikko.ogg","musiikki")
+	print("Soitetaan valikkomusiikki")
 	paavalikko = Menu.new()
 
 	paavalikko:addItem{

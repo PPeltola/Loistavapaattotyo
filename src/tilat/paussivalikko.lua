@@ -53,8 +53,8 @@ end
 
 
 function paussivalikko:draw()
-
-	love.graphics.draw( kuvat[ "testi_tausta.png" ], 0, 0 )
+	peli:draw()
+	love.graphics.draw( kuvat[ "paussi_tausta.png" ], 0, 0 ) --Paussitausta on 25% läpinäkyvä
 
 	valikko:draw( 100, 200 )
 

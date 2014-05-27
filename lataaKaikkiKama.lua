@@ -67,6 +67,7 @@ end
 hahmoVarasto = {
 	"Velho",
 	"Ritari",
+	"Kekkonen"
 	
 }
 
