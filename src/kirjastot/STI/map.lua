@@ -312,34 +312,37 @@ function Map:setDrawRange(tx, ty, w, h)
 	}
 end
 
-function Map:getCollisionMap(index)
-	local layer	= assert(self.layers[index], "Layer not found: " .. index)
-	
-	assert(layer.type == "tilelayer", "Invalid layer type: " .. layer.type .. ". Layer must be of type: tilelayer")
-	
-	local w		= self.width
-	local h		= self.height
-	local map	= {
-		type		= layer.type,
-		orientation	= layer.orientation,
-		collision	= true,
-		opacity		= 0.5,
-		data		= {},
-	}
-	
-	for y=1, h do
-		map.data[y] = {}
-		for x=1, w do
-			if layer.data[y][x] == nil then
-				map.data[y][x] = 0
-			else
-				map.data[y][x] = 1
-			end
-		end
-	end
-	
-	return map
-end
+    function Map:getCollisionMap(index)
+       local layer   = assert(self.layers[index], "Layer not found: " .. index)
+
+       assert(layer.type == "tilelayer", "Invalid layer type: " .. layer.type .. ". Layer must be of type: tilelayer")
+
+       local w      = self.width
+       local h      = self.height
+       local map   = {
+          type      = layer.type,
+          orientation   = layer.orientation,
+          collision   = true,
+          opacity      = 0.5,
+          data      = {},
+       }
+
+       for y=1, h do
+          map.data[y] = {}
+          for x=1, w do
+             if layer.data[y][x] == nil then
+                map.data[y][x] = 0
+             else
+                map.data[y][x] = 1
+                ctile = tormaytin:addRectangle((x-1)*self.tilewidth, (y-1)*self.tileheight, self.tilewidth, self.tileheight)
+                tormaytin:setPassive(ctile)
+				print("Nyt on collision")
+             end
+          end
+       end
+
+       return map
+    end
 
 function Map:addCustomLayer(name, index)
 	local layer = {

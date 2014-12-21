@@ -67,6 +67,37 @@ return {
         0, 79, 57, 58, 62, 60, 61, 62, 63, 64, 65, 0, 0, 0, 79, 15, 16, 17, 21, 22, 23, 24, 25, 23, 21, 22, 23, 24, 25, 26,
         0, 79, 70, 71, 75, 73, 74, 75, 76, 77, 78, 0, 0, 0, 79, 28, 29, 33, 34, 35, 36, 37, 38, 36, 34, 35, 36, 37, 38, 39
       }
+    },
+    {
+      type = "objectgroup",
+      name = "Syntykohdat",
+      visible = true,
+      opacity = 1,
+      properties = {},
+      objects = {
+        {
+          name = "",
+          type = "",
+          shape = "rectangle",
+          x = 160,
+          y = 320,
+          width = 0,
+          height = 0,
+          visible = true,
+          properties = {}
+        },
+        {
+          name = "",
+          type = "",
+          shape = "rectangle",
+          x = 704,
+          y = 192,
+          width = 0,
+          height = 0,
+          visible = true,
+          properties = {}
+        }
+      }
     }
   }
 }

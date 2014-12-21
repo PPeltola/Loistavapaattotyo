@@ -907,4 +907,8 @@
    <tile gid="39"/>
   </data>
  </layer>
+ <objectgroup name="Syntykohdat" width="30" height="30">
+  <object x="160" y="320"/>
+  <object x="704" y="192"/>
+ </objectgroup>
 </map>

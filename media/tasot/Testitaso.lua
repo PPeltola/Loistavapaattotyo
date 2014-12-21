@@ -111,6 +111,59 @@ return {
         0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
         0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
       }
+    },
+    {
+      type = "objectgroup",
+      name = "Syntykohdat",
+      visible = false,
+      opacity = 1,
+      properties = {},
+      objects = {
+        {
+          name = "pelaajaYksi",
+          type = "pelaaja",
+          shape = "rectangle",
+          x = 64,
+          y = 160,
+          width = 32,
+          height = 32,
+          visible = true,
+          properties = {}
+        },
+        {
+          name = "pelaajaKaksi",
+          type = "pelaaja",
+          shape = "rectangle",
+          x = 832,
+          y = 416,
+          width = 32,
+          height = 32,
+          visible = true,
+          properties = {}
+        },
+        {
+          name = "pelaajaKolme",
+          type = "pelaaja",
+          shape = "rectangle",
+          x = 384,
+          y = 416,
+          width = 32,
+          height = 32,
+          visible = true,
+          properties = {}
+        },
+        {
+          name = "pelaajaNelja",
+          type = "pelaaja",
+          shape = "rectangle",
+          x = 384,
+          y = 64,
+          width = 32,
+          height = 32,
+          visible = true,
+          properties = {}
+        }
+      }
     }
   }
 }
